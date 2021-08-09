@@ -1,5 +1,5 @@
 {% set name = "solana" %}
-{% set version = "0.11.1" %}
+{% set version = "0.11.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/solana-{{ version }}.tar.gz
-  sha256: 897add8582e1395d694be68dbc988fd88d57757a5a28135534fea52d0b5bf434
+  sha256: c18bd089ea7023e0d301cbad42bb1812d09ef73bca2b196b0adbe7028e747bf7
 
 build:
   number: 0
@@ -41,10 +41,10 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Solana Python SDK'
+  summary: Solana Python SDK
   description: |
     Solana Python API built on the JSON RPC API.
-    
+
     Python version of solana-web3.js for interacting with Solana.
   doc_url: https://michaelhly.github.io/solana-py/
   dev_url: https://github.com/michaelhly/solana-py

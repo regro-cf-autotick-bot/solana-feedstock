@@ -1,5 +1,5 @@
 {% set name = "solana" %}
-{% set version = "0.12.1" %}
+{% set version = "0.14.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/solana-{{ version }}.tar.gz
-  sha256: 8f92a6c83988d09525681d6761c84a3388f4de1cbd20193b909243d9fc0485a2
+  sha256: 60d0cfd4d96e5fc784529914a5cf259e3db2bac92db0627ba74c6fc533a10547
 
 build:
   number: 0

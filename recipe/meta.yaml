@@ -1,5 +1,5 @@
 {% set name = "solana" %}
-{% set version = "0.15.0" %}
+{% set version = "0.15.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/solana-{{ version }}.tar.gz
-  sha256: 216d0642358e0f65d8d66564c1c3205295f4d651781a06a428221267a7799162
+  sha256: 699a9e6f02bbe3d16da6a8e3c472a94e0eba0b2e5c570fbc9e57f1baec4ce8ab
 
 build:
   number: 0
@@ -21,6 +21,7 @@ requirements:
     - python >=3.7
   run:
     - base58 >=2.0.1
+    - cachetools >=4.2.2,<5.0.0
     - construct >=2.10.56
     - pynacl >=1.4
     - python >=3.7

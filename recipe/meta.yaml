@@ -1,5 +1,5 @@
 {% set name = "solana" %}
-{% set version = "0.16.0" %}
+{% set version = "0.18.2" %}
 
 
 package:
@@ -8,30 +8,34 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/solana-{{ version }}.tar.gz
-  sha256: 72ffc5b32aea10e7c592a9a14897410c762d620798ffb9b8e888f3bd83443f9d
+  sha256: 0431bd10cbe92d82a0c102e9f736483afc06ffbb6af18b81b06aec0c5e029813
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --use-deprecated=out-of-tree-build
 
 requirements:
   host:
     - pip
+    - poetry-core
     - python >=3.7
   run:
     - base58 >=2.0.1
     - cachetools >=4.2.2,<5.0.0
     - construct >=2.10.56
+    - construct-typing >=0.5.2
     - pynacl >=1.4
     - python >=3.7
     - requests >=2.24.0
     - typing-extensions
-    - httpx >=0.18.2
+    - types-cachetools >=4.2.4,<5.0.0
+    - httpx >=0.18.2,<0.19.0
 
 test:
   imports:
     - solana
+    - spl
   commands:
     - pip check
   requires:
